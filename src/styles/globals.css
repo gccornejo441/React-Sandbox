@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --geist-background: #fff;
+  --geist-foreground: #000;
+  --geist-muted: rgb(161, 161, 161);
+  --geist-accent-bg: rgb(237, 237, 237);
+  --geist-accent-text: rgb(10, 10, 10);
+  --geist-hover: rgb(220, 220, 220);
+  --geist-border: rgba(0, 0, 0, 0.1);
+  --geist-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+
+  --color-primary-light: #326B93;       /* Blue */
+  --color-secondary-light: #4ABDAC;     /* Teal */
+  --color-tertiary-light: #44546A;      /* Dark Blue */
+
+  --color-primary: var(--color-primary-light);
+  --color-accent: var(--color-secondary-light);
+  --color-highlight: var(--color-tertiary-light);
+}
+
+.dark {
+  --geist-background: #000;
+  --geist-foreground: #fff;
+  --geist-muted: rgb(161, 161, 161);
+  --geist-accent-bg: rgb(10, 10, 10);
+  --geist-accent-text: rgb(237, 237, 237);
+  --geist-hover: #000;
+  --geist-border: rgba(255, 255, 255, 0.1);
+  --geist-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
+
+  --color-primary: var(--color-tertiary-light);
+  --color-accent: var(--color-primary-light);   
+  --color-highlight: var(--color-secondary-light);
+}
+
+main {
+  --cellsize: calc(calc(100vw - 32px) / 8);
+}
+
+@media (min-width: 768px) {
+  main {
+    --cellsize: calc(min(1080px, 100vw - 32px) / 12);
+  }
+}
