@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --geist-background: #fff;
-  --geist-foreground: #000;
-  --geist-muted: rgb(161, 161, 161);
-  --geist-accent-bg: rgb(237, 237, 237);
-  --geist-accent-text: rgb(10, 10, 10);
-  --geist-hover: rgb(220, 220, 220);
-  --geist-border: rgba(0, 0, 0, 0.1);
-  --geist-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  --background: #fff;
+  --foreground: #000;
+  --muted: rgb(161, 161, 161);
+  --accent-bg: rgb(237, 237, 237);
+  --accent-text: rgb(10, 10, 10);
+  --hover: rgb(220, 220, 220);
+  --border: rgba(0, 0, 0, 0.1);
+  --shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
 
   --color-primary-light: #326B93;       /* Blue */
   --color-secondary-light: #4ABDAC;     /* Teal */
@@ -19,17 +19,44 @@
   --color-primary: var(--color-primary-light);
   --color-accent: var(--color-secondary-light);
   --color-highlight: var(--color-tertiary-light);
+    
+  @apply font-sans;
 }
 
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist/webfonts/Geist-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist/webfonts/Geist-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/Geist/webfonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 .dark {
-  --geist-background: #000;
-  --geist-foreground: #fff;
-  --geist-muted: rgb(161, 161, 161);
-  --geist-accent-bg: rgb(10, 10, 10);
-  --geist-accent-text: rgb(237, 237, 237);
-  --geist-hover: #000;
-  --geist-border: rgba(255, 255, 255, 0.1);
-  --geist-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
+  --background: #000;
+  --foreground: #fff;
+  --muted: rgb(161, 161, 161);
+  --accent-bg: rgb(10, 10, 10);
+  --accent-text: rgb(237, 237, 237);
+  --hover: #000;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0px 0px 2px rgba(255, 255, 255, 0.4);
 
   --color-primary: var(--color-tertiary-light);
   --color-accent: var(--color-primary-light);   
